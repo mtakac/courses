@@ -9,3 +9,14 @@ Use RVM, versions can be found in .ruby-gemset & .ruby-version
 * $: rake db:schema:load
 * $: rake db:seed
 * $: rails server
+
+== See it in action
+
+The only available page is currently the detail of the course chapter. The URL is
+`#/courses/:course_id/chapters/:id`. If you have only seed data visit
+`#/courses/1/chapters/1`.
+
+== SPA
+
+The SPA code is located in `app/assets/javascripts/client` directory.
+Start from `app/assets/javascripts/client/app.js.jsx` and follow comments.

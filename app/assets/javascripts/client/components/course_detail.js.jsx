@@ -1,7 +1,11 @@
+// Course detail component, responsible for course detail view state and
+// for requiring all other parts and components needed to render the course detail
+// view
+
 //= require ./chapter
 
 var CourseDetail = React.createClass({
-
+	// START React methods
 	mixins: [
 		Reflux.listenTo(CourseStore, 'onChange'),
 	],
@@ -20,7 +24,9 @@ var CourseDetail = React.createClass({
 	componentWillReceiveProps: function(nextProps) {
 		Actions.getCourse(nextProps.params.courseId);
 	},
+	// END React methods
 
+	// Our costum method
 	onChange: function() {
 		this.setState({
 			course: CourseStore.course,
@@ -28,6 +34,7 @@ var CourseDetail = React.createClass({
 		});
 	},
 
+	// Mandatory render method - every React component needs to have one
 	render: function() {
 		return (
 			<div className="course-detail">
