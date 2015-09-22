@@ -1,0 +1,14 @@
+<% if true %> <!-- If user is logged in -->
+<% else false %> <!-- If user is anon. -->
+  <div class="row">
+    <div class="col-sm-12">
+      <h1><%= @course.title %></h1>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-12">
+      <p><%= @course.description %></p>
+    </div>
+  </div>
+<% end %>
